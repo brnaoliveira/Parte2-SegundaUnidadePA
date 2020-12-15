@@ -1,0 +1,110 @@
+\hypertarget{_sculptor_8cpp}{}\doxysection{Referência do Arquivo D\+:/\+Downloads/\+Escultor3\+D\+\_\+parte2/\+Sculptor.cpp}
+\label{_sculptor_8cpp}\index{D:/Downloads/Escultor3D\_parte2/Sculptor.cpp@{D:/Downloads/Escultor3D\_parte2/Sculptor.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$Sculptor.\+h$>$}\newline
+\doxysubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_voxel}{Voxel}} $\ast$$\ast$$\ast$ \mbox{\hyperlink{_sculptor_8cpp_a702174f787dbf131405d9ddccb240611}{aloca\+Espaco}} (int nc, int na, int nl)
+\item 
+bool \mbox{\hyperlink{_sculptor_8cpp_aabf9cc6b6b14c65c22f065d37ae46114}{satisfaz\+Eq\+Esfera}} (int z, int x, int y, int a, int b, int c, int raio)
+\item 
+bool \mbox{\hyperlink{_sculptor_8cpp_af3991c70607baa62e160b3e034cc6340}{satisfaz\+Eq\+Elipse}} (int z, int x, int y, int xcent, int ycent, int zcent, int a, int b, int c)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Funções}
+\mbox{\Hypertarget{_sculptor_8cpp_a702174f787dbf131405d9ddccb240611}\label{_sculptor_8cpp_a702174f787dbf131405d9ddccb240611}} 
+\index{Sculptor.cpp@{Sculptor.cpp}!alocaEspaco@{alocaEspaco}}
+\index{alocaEspaco@{alocaEspaco}!Sculptor.cpp@{Sculptor.cpp}}
+\doxysubsubsection{\texorpdfstring{alocaEspaco()}{alocaEspaco()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_voxel}{Voxel}}$\ast$$\ast$$\ast$ aloca\+Espaco (\begin{DoxyParamCaption}\item[{int}]{nc,  }\item[{int}]{na,  }\item[{int}]{nl }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{6 \{}
+\DoxyCodeLine{7     \textcolor{comment}{/*}}
+\DoxyCodeLine{8 \textcolor{comment}{     * A função "{}alocaEspaco"{} tem esse nome devido a sua função do escultor,}}
+\DoxyCodeLine{9 \textcolor{comment}{     * ela é responsável por alocar o espaço tridimensional onde ser feito a escultura 3D}}
+\DoxyCodeLine{10 \textcolor{comment}{     * Basicamente é feita uma alocação de uma matriz, onde cada elemento dessa matriz recebe}}
+\DoxyCodeLine{11 \textcolor{comment}{     * um vetor que corresponde a altura desse espaço.}}
+\DoxyCodeLine{12 \textcolor{comment}{    */}}
+\DoxyCodeLine{13     \textcolor{keywordtype}{int} i,j;}
+\DoxyCodeLine{14     \mbox{\hyperlink{struct_voxel}{Voxel}} ***aux;}
+\DoxyCodeLine{15     aux = \textcolor{keyword}{new} \mbox{\hyperlink{struct_voxel}{Voxel}}**[nl]; \textcolor{comment}{// alocação referente as linhas da matriz}}
+\DoxyCodeLine{16     \textcolor{keywordflow}{if}(aux != 0) \textcolor{comment}{// verifica se a alocação da memória foi feita da forma correta}}
+\DoxyCodeLine{17     \{}
+\DoxyCodeLine{18         \textcolor{comment}{/*}}
+\DoxyCodeLine{19 \textcolor{comment}{         * alocação das colunas de forma onde o primeiro endereço de "{}aux"{} contenha o primeiro endereço referente ao}}
+\DoxyCodeLine{20 \textcolor{comment}{         * vetor de colunas da minha matriz.}}
+\DoxyCodeLine{21 \textcolor{comment}{         * A iteração que vem logo em seguida serve para ajustar os endereços de memoria de forma que fiquem sequenciais}}
+\DoxyCodeLine{22 \textcolor{comment}{        */}}
+\DoxyCodeLine{23         aux[0] = \textcolor{keyword}{new} \mbox{\hyperlink{struct_voxel}{Voxel}}*[nl*nc];}
+\DoxyCodeLine{24         \textcolor{keywordflow}{if}(aux[0]!=0)}
+\DoxyCodeLine{25         \{}
+\DoxyCodeLine{26             \textcolor{keywordflow}{for}(i = 1;i < nl; i++) \textcolor{comment}{// Iteração para ajuste das posições do eixo X na memória}}
+\DoxyCodeLine{27             \{}
+\DoxyCodeLine{28                aux[i] = aux[i-\/1] + nc;}
+\DoxyCodeLine{29             \}}
+\DoxyCodeLine{30         \}}
+\DoxyCodeLine{31         \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{32             aux=0;}
+\DoxyCodeLine{33             \textcolor{keywordflow}{return} aux;}
+\DoxyCodeLine{34         \}}
+\DoxyCodeLine{35     \}}
+\DoxyCodeLine{36     \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{37         aux = 0;}
+\DoxyCodeLine{38         \textcolor{keywordflow}{return} aux;}
+\DoxyCodeLine{39     \}}
+\DoxyCodeLine{40     \textcolor{keywordflow}{for}(i=0;i<nl;i++)\{}
+\DoxyCodeLine{41         \textcolor{keywordflow}{for}(j=0;j<nc;j++)\{}
+\DoxyCodeLine{42             aux[i][j] = \textcolor{keyword}{new} \mbox{\hyperlink{struct_voxel}{Voxel}}[na];}
+\DoxyCodeLine{43             \textcolor{keywordflow}{if}(aux[i][j]==0)\{}
+\DoxyCodeLine{44                 j-\/-\/;}
+\DoxyCodeLine{45             \}}
+\DoxyCodeLine{46             \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{47             \}}
+\DoxyCodeLine{48         \}}
+\DoxyCodeLine{49     \}}
+\DoxyCodeLine{50     \textcolor{keywordflow}{return} aux;}
+\DoxyCodeLine{51 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_sculptor_8cpp_af3991c70607baa62e160b3e034cc6340}\label{_sculptor_8cpp_af3991c70607baa62e160b3e034cc6340}} 
+\index{Sculptor.cpp@{Sculptor.cpp}!satisfazEqElipse@{satisfazEqElipse}}
+\index{satisfazEqElipse@{satisfazEqElipse}!Sculptor.cpp@{Sculptor.cpp}}
+\doxysubsubsection{\texorpdfstring{satisfazEqElipse()}{satisfazEqElipse()}}
+{\footnotesize\ttfamily bool satisfaz\+Eq\+Elipse (\begin{DoxyParamCaption}\item[{int}]{z,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{xcent,  }\item[{int}]{ycent,  }\item[{int}]{zcent,  }\item[{int}]{a,  }\item[{int}]{b,  }\item[{int}]{c }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{196 \{}
+\DoxyCodeLine{197     \textcolor{keywordtype}{int} aux = (float)(x-\/xcent)*(x-\/xcent)/(a*a) + float(y-\/ycent)*(y-\/ycent)/(b*b) + float(z-\/zcent)*(z-\/zcent)/(c*c);}
+\DoxyCodeLine{198     \textcolor{keywordflow}{if}(aux <= 1)}
+\DoxyCodeLine{199         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{200     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{201         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{202 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_sculptor_8cpp_aabf9cc6b6b14c65c22f065d37ae46114}\label{_sculptor_8cpp_aabf9cc6b6b14c65c22f065d37ae46114}} 
+\index{Sculptor.cpp@{Sculptor.cpp}!satisfazEqEsfera@{satisfazEqEsfera}}
+\index{satisfazEqEsfera@{satisfazEqEsfera}!Sculptor.cpp@{Sculptor.cpp}}
+\doxysubsubsection{\texorpdfstring{satisfazEqEsfera()}{satisfazEqEsfera()}}
+{\footnotesize\ttfamily bool satisfaz\+Eq\+Esfera (\begin{DoxyParamCaption}\item[{int}]{z,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{a,  }\item[{int}]{b,  }\item[{int}]{c,  }\item[{int}]{raio }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{185 \{}
+\DoxyCodeLine{186     \textcolor{keywordtype}{int} rQrd = raio*raio;}
+\DoxyCodeLine{187     \textcolor{keywordtype}{int} aux = (x-\/a)*(x-\/a) + (y-\/b)*(y-\/b) + (z-\/c)*(z-\/c);}
+\DoxyCodeLine{188     \textcolor{keywordflow}{if}(aux <= rQrd)\{}
+\DoxyCodeLine{189         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{190     \}}
+\DoxyCodeLine{191     \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{192         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{193     \}}
+\DoxyCodeLine{194 \}}
+
+\end{DoxyCode}

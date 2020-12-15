@@ -1,0 +1,56 @@
+\hypertarget{_sculptor_8h}{}\doxysection{Referência do Arquivo D\+:/\+Downloads/\+Escultor3\+D\+\_\+parte2/\+Sculptor.h}
+\label{_sculptor_8h}\index{D:/Downloads/Escultor3D\_parte2/Sculptor.h@{D:/Downloads/Escultor3D\_parte2/Sculptor.h}}
+\doxysubsection*{Componentes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_voxel}{Voxel}}
+\item 
+class \mbox{\hyperlink{class_sculptor}{Sculptor}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{_sculptor_8h_aabf9cc6b6b14c65c22f065d37ae46114}{satisfaz\+Eq\+Esfera}} (int z, int x, int y, int a, int b, int c, int raio)
+\item 
+bool \mbox{\hyperlink{_sculptor_8h_af3991c70607baa62e160b3e034cc6340}{satisfaz\+Eq\+Elipse}} (int z, int x, int y, int xcent, int ycent, int zcent, int a, int b, int c)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Funções}
+\mbox{\Hypertarget{_sculptor_8h_af3991c70607baa62e160b3e034cc6340}\label{_sculptor_8h_af3991c70607baa62e160b3e034cc6340}} 
+\index{Sculptor.h@{Sculptor.h}!satisfazEqElipse@{satisfazEqElipse}}
+\index{satisfazEqElipse@{satisfazEqElipse}!Sculptor.h@{Sculptor.h}}
+\doxysubsubsection{\texorpdfstring{satisfazEqElipse()}{satisfazEqElipse()}}
+{\footnotesize\ttfamily bool satisfaz\+Eq\+Elipse (\begin{DoxyParamCaption}\item[{int}]{z,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{xcent,  }\item[{int}]{ycent,  }\item[{int}]{zcent,  }\item[{int}]{a,  }\item[{int}]{b,  }\item[{int}]{c }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{196 \{}
+\DoxyCodeLine{197     \textcolor{keywordtype}{int} aux = (float)(x-\/xcent)*(x-\/xcent)/(a*a) + float(y-\/ycent)*(y-\/ycent)/(b*b) + float(z-\/zcent)*(z-\/zcent)/(c*c);}
+\DoxyCodeLine{198     \textcolor{keywordflow}{if}(aux <= 1)}
+\DoxyCodeLine{199         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{200     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{201         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{202 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_sculptor_8h_aabf9cc6b6b14c65c22f065d37ae46114}\label{_sculptor_8h_aabf9cc6b6b14c65c22f065d37ae46114}} 
+\index{Sculptor.h@{Sculptor.h}!satisfazEqEsfera@{satisfazEqEsfera}}
+\index{satisfazEqEsfera@{satisfazEqEsfera}!Sculptor.h@{Sculptor.h}}
+\doxysubsubsection{\texorpdfstring{satisfazEqEsfera()}{satisfazEqEsfera()}}
+{\footnotesize\ttfamily bool satisfaz\+Eq\+Esfera (\begin{DoxyParamCaption}\item[{int}]{z,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{a,  }\item[{int}]{b,  }\item[{int}]{c,  }\item[{int}]{raio }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{185 \{}
+\DoxyCodeLine{186     \textcolor{keywordtype}{int} rQrd = raio*raio;}
+\DoxyCodeLine{187     \textcolor{keywordtype}{int} aux = (x-\/a)*(x-\/a) + (y-\/b)*(y-\/b) + (z-\/c)*(z-\/c);}
+\DoxyCodeLine{188     \textcolor{keywordflow}{if}(aux <= rQrd)\{}
+\DoxyCodeLine{189         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{190     \}}
+\DoxyCodeLine{191     \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{192         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{193     \}}
+\DoxyCodeLine{194 \}}
+
+\end{DoxyCode}

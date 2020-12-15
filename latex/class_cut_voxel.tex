@@ -1,0 +1,93 @@
+\hypertarget{class_cut_voxel}{}\doxysection{Referência da Classe Cut\+Voxel}
+\label{class_cut_voxel}\index{CutVoxel@{CutVoxel}}
+
+
+{\ttfamily \#include $<$cutvoxel.\+h$>$}
+
+Diagrama de hierarquia para Cut\+Voxel\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_cut_voxel}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cut_voxel_a8b8ed10d003e44f945fbebe75c8f0622}{Cut\+Voxel}} (int \+\_\+x, int \+\_\+y, int \+\_\+z)
+\item 
+void \mbox{\hyperlink{class_cut_voxel_a6cebf549d1471b67afe4bc5aca7304a1}{draw}} (\mbox{\hyperlink{class_sculptor}{Sculptor}} \&screen)
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_cut_voxel_ae7338462b96d9f85b844d4c927765213}{x}}
+\item 
+int \mbox{\hyperlink{class_cut_voxel_ae62d619cb2e91cddc1cd73053b1afc89}{y}}
+\item 
+int \mbox{\hyperlink{class_cut_voxel_a614f25963845556b8a105f14dddc1e98}{z}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{class_cut_voxel_a8b8ed10d003e44f945fbebe75c8f0622}\label{class_cut_voxel_a8b8ed10d003e44f945fbebe75c8f0622}} 
+\index{CutVoxel@{CutVoxel}!CutVoxel@{CutVoxel}}
+\index{CutVoxel@{CutVoxel}!CutVoxel@{CutVoxel}}
+\doxysubsubsection{\texorpdfstring{CutVoxel()}{CutVoxel()}}
+{\footnotesize\ttfamily Cut\+Voxel\+::\+Cut\+Voxel (\begin{DoxyParamCaption}\item[{int}]{\+\_\+x,  }\item[{int}]{\+\_\+y,  }\item[{int}]{\+\_\+z }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5 \{}
+\DoxyCodeLine{6     \mbox{\hyperlink{class_cut_voxel_ae7338462b96d9f85b844d4c927765213}{x}} = \_x; \mbox{\hyperlink{class_cut_voxel_ae62d619cb2e91cddc1cd73053b1afc89}{y}} = \_y; \mbox{\hyperlink{class_cut_voxel_a614f25963845556b8a105f14dddc1e98}{z}} = \_z;}
+\DoxyCodeLine{7 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{class_cut_voxel_a6cebf549d1471b67afe4bc5aca7304a1}\label{class_cut_voxel_a6cebf549d1471b67afe4bc5aca7304a1}} 
+\index{CutVoxel@{CutVoxel}!draw@{draw}}
+\index{draw@{draw}!CutVoxel@{CutVoxel}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Cut\+Voxel\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sculptor}{Sculptor}} \&}]{screen }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implementa \mbox{\hyperlink{class_figura_geometrica_a44fdec95db5c300865af1d68dc236b14}{Figura\+Geometrica}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10 \{}
+\DoxyCodeLine{11     \textcolor{keywordflow}{if}(screen.\mbox{\hyperlink{class_sculptor_a0c93c565ba67650d54d6f61ff81ff802}{verificaCord}}(\mbox{\hyperlink{class_cut_voxel_ae7338462b96d9f85b844d4c927765213}{x}},\mbox{\hyperlink{class_cut_voxel_ae62d619cb2e91cddc1cd73053b1afc89}{y}},\mbox{\hyperlink{class_cut_voxel_a614f25963845556b8a105f14dddc1e98}{z}}))\{}
+\DoxyCodeLine{12         screen.\mbox{\hyperlink{class_sculptor_ad9d714a35fc8ae16d06eb5df37c3493c}{cutVoxel}}(\mbox{\hyperlink{class_cut_voxel_ae7338462b96d9f85b844d4c927765213}{x}},\mbox{\hyperlink{class_cut_voxel_ae62d619cb2e91cddc1cd73053b1afc89}{y}},\mbox{\hyperlink{class_cut_voxel_a614f25963845556b8a105f14dddc1e98}{z}});}
+\DoxyCodeLine{13     \}}
+\DoxyCodeLine{14 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{class_cut_voxel_ae7338462b96d9f85b844d4c927765213}\label{class_cut_voxel_ae7338462b96d9f85b844d4c927765213}} 
+\index{CutVoxel@{CutVoxel}!x@{x}}
+\index{x@{x}!CutVoxel@{CutVoxel}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily int Cut\+Voxel\+::x\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_cut_voxel_ae62d619cb2e91cddc1cd73053b1afc89}\label{class_cut_voxel_ae62d619cb2e91cddc1cd73053b1afc89}} 
+\index{CutVoxel@{CutVoxel}!y@{y}}
+\index{y@{y}!CutVoxel@{CutVoxel}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily int Cut\+Voxel\+::y\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_cut_voxel_a614f25963845556b8a105f14dddc1e98}\label{class_cut_voxel_a614f25963845556b8a105f14dddc1e98}} 
+\index{CutVoxel@{CutVoxel}!z@{z}}
+\index{z@{z}!CutVoxel@{CutVoxel}}
+\doxysubsubsection{\texorpdfstring{z}{z}}
+{\footnotesize\ttfamily int Cut\+Voxel\+::z\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Downloads/\+Escultor3\+D\+\_\+parte2/\mbox{\hyperlink{cutvoxel_8h}{cutvoxel.\+h}}\item 
+D\+:/\+Downloads/\+Escultor3\+D\+\_\+parte2/\mbox{\hyperlink{cutvoxel_8cpp}{cutvoxel.\+cpp}}\end{DoxyCompactItemize}

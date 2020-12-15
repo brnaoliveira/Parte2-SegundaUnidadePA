@@ -1,0 +1,126 @@
+\hypertarget{class_cut_box}{}\doxysection{Referência da Classe Cut\+Box}
+\label{class_cut_box}\index{CutBox@{CutBox}}
+
+
+{\ttfamily \#include $<$cutbox.\+h$>$}
+
+Diagrama de hierarquia para Cut\+Box\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_cut_box}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cut_box_a53a8f4bdb570b771aec46a954e9e10a6}{Cut\+Box}} (int \+\_\+x0, int \+\_\+xi, int \+\_\+y0, int \+\_\+yi, int \+\_\+z0, int \+\_\+zi)
+\item 
+void \mbox{\hyperlink{class_cut_box_a720bd913e3c807760d203fd4e6772b10}{draw}} (\mbox{\hyperlink{class_sculptor}{Sculptor}} \&screen)
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_cut_box_a9b3c2e2f41f7f73f324c59d11fc73e9b}{x0}}
+\item 
+int \mbox{\hyperlink{class_cut_box_aa8865d81bd52f5f537ab7f9b476b914a}{xi}}
+\item 
+int \mbox{\hyperlink{class_cut_box_ab8bd7a8a94c1336daad8d808f5d62f68}{y0}}
+\item 
+int \mbox{\hyperlink{class_cut_box_a94df73030da7b107ea8428499c40dad5}{yi}}
+\item 
+int \mbox{\hyperlink{class_cut_box_afb2ac28e61b363d723cc1af03edb37f2}{z0}}
+\item 
+int \mbox{\hyperlink{class_cut_box_aeceacbe7a051a29ee7a230e43b6f068d}{zi}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{class_cut_box_a53a8f4bdb570b771aec46a954e9e10a6}\label{class_cut_box_a53a8f4bdb570b771aec46a954e9e10a6}} 
+\index{CutBox@{CutBox}!CutBox@{CutBox}}
+\index{CutBox@{CutBox}!CutBox@{CutBox}}
+\doxysubsubsection{\texorpdfstring{CutBox()}{CutBox()}}
+{\footnotesize\ttfamily Cut\+Box\+::\+Cut\+Box (\begin{DoxyParamCaption}\item[{int}]{\+\_\+x0,  }\item[{int}]{\+\_\+xi,  }\item[{int}]{\+\_\+y0,  }\item[{int}]{\+\_\+yi,  }\item[{int}]{\+\_\+z0,  }\item[{int}]{\+\_\+zi }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{4 \{}
+\DoxyCodeLine{5     \mbox{\hyperlink{class_cut_box_a9b3c2e2f41f7f73f324c59d11fc73e9b}{x0}} = \_x0-\/1; \mbox{\hyperlink{class_cut_box_aa8865d81bd52f5f537ab7f9b476b914a}{xi}} = \_xi-\/1; \mbox{\hyperlink{class_cut_box_ab8bd7a8a94c1336daad8d808f5d62f68}{y0}} =\_y0-\/1; \mbox{\hyperlink{class_cut_box_a94df73030da7b107ea8428499c40dad5}{yi}} = \_yi-\/1; \mbox{\hyperlink{class_cut_box_afb2ac28e61b363d723cc1af03edb37f2}{z0}} = \_z0-\/1; \mbox{\hyperlink{class_cut_box_aeceacbe7a051a29ee7a230e43b6f068d}{zi}} = \_zi-\/1;}
+\DoxyCodeLine{6 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{class_cut_box_a720bd913e3c807760d203fd4e6772b10}\label{class_cut_box_a720bd913e3c807760d203fd4e6772b10}} 
+\index{CutBox@{CutBox}!draw@{draw}}
+\index{draw@{draw}!CutBox@{CutBox}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Cut\+Box\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sculptor}{Sculptor}} \&}]{screen }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implementa \mbox{\hyperlink{class_figura_geometrica_a44fdec95db5c300865af1d68dc236b14}{Figura\+Geometrica}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10     \textcolor{keywordtype}{int} i,j,w;}
+\DoxyCodeLine{11     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_cut_box_aa8865d81bd52f5f537ab7f9b476b914a}{xi}}>=\mbox{\hyperlink{class_cut_box_a9b3c2e2f41f7f73f324c59d11fc73e9b}{x0}}\&\&\mbox{\hyperlink{class_cut_box_a94df73030da7b107ea8428499c40dad5}{yi}}>=\mbox{\hyperlink{class_cut_box_ab8bd7a8a94c1336daad8d808f5d62f68}{y0}}\&\&\mbox{\hyperlink{class_cut_box_aeceacbe7a051a29ee7a230e43b6f068d}{zi}}>=\mbox{\hyperlink{class_cut_box_afb2ac28e61b363d723cc1af03edb37f2}{z0}})\{}
+\DoxyCodeLine{12         \textcolor{keywordflow}{for}(i=\mbox{\hyperlink{class_cut_box_afb2ac28e61b363d723cc1af03edb37f2}{z0}};i<=\mbox{\hyperlink{class_cut_box_aeceacbe7a051a29ee7a230e43b6f068d}{zi}};i++)\{}
+\DoxyCodeLine{13             \textcolor{keywordflow}{for}(j=\mbox{\hyperlink{class_cut_box_a9b3c2e2f41f7f73f324c59d11fc73e9b}{x0}};j<=\mbox{\hyperlink{class_cut_box_aa8865d81bd52f5f537ab7f9b476b914a}{xi}};j++)\{}
+\DoxyCodeLine{14                 \textcolor{keywordflow}{for}(w=\mbox{\hyperlink{class_cut_box_ab8bd7a8a94c1336daad8d808f5d62f68}{y0}};w<=\mbox{\hyperlink{class_cut_box_a94df73030da7b107ea8428499c40dad5}{yi}};w++)\{}
+\DoxyCodeLine{15                     \textcolor{keywordflow}{if}(screen.\mbox{\hyperlink{class_sculptor_a0c93c565ba67650d54d6f61ff81ff802}{verificaCord}}(j,w,i))\{}
+\DoxyCodeLine{16                         screen.\mbox{\hyperlink{class_sculptor_ad9d714a35fc8ae16d06eb5df37c3493c}{cutVoxel}}(j,w,i);}
+\DoxyCodeLine{17                     \}}
+\DoxyCodeLine{18                 \}}
+\DoxyCodeLine{19             \}}
+\DoxyCodeLine{20         \}}
+\DoxyCodeLine{21     \}}
+\DoxyCodeLine{22 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{class_cut_box_a9b3c2e2f41f7f73f324c59d11fc73e9b}\label{class_cut_box_a9b3c2e2f41f7f73f324c59d11fc73e9b}} 
+\index{CutBox@{CutBox}!x0@{x0}}
+\index{x0@{x0}!CutBox@{CutBox}}
+\doxysubsubsection{\texorpdfstring{x0}{x0}}
+{\footnotesize\ttfamily int Cut\+Box\+::x0\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_cut_box_aa8865d81bd52f5f537ab7f9b476b914a}\label{class_cut_box_aa8865d81bd52f5f537ab7f9b476b914a}} 
+\index{CutBox@{CutBox}!xi@{xi}}
+\index{xi@{xi}!CutBox@{CutBox}}
+\doxysubsubsection{\texorpdfstring{xi}{xi}}
+{\footnotesize\ttfamily int Cut\+Box\+::xi\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_cut_box_ab8bd7a8a94c1336daad8d808f5d62f68}\label{class_cut_box_ab8bd7a8a94c1336daad8d808f5d62f68}} 
+\index{CutBox@{CutBox}!y0@{y0}}
+\index{y0@{y0}!CutBox@{CutBox}}
+\doxysubsubsection{\texorpdfstring{y0}{y0}}
+{\footnotesize\ttfamily int Cut\+Box\+::y0\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_cut_box_a94df73030da7b107ea8428499c40dad5}\label{class_cut_box_a94df73030da7b107ea8428499c40dad5}} 
+\index{CutBox@{CutBox}!yi@{yi}}
+\index{yi@{yi}!CutBox@{CutBox}}
+\doxysubsubsection{\texorpdfstring{yi}{yi}}
+{\footnotesize\ttfamily int Cut\+Box\+::yi\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_cut_box_afb2ac28e61b363d723cc1af03edb37f2}\label{class_cut_box_afb2ac28e61b363d723cc1af03edb37f2}} 
+\index{CutBox@{CutBox}!z0@{z0}}
+\index{z0@{z0}!CutBox@{CutBox}}
+\doxysubsubsection{\texorpdfstring{z0}{z0}}
+{\footnotesize\ttfamily int Cut\+Box\+::z0\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_cut_box_aeceacbe7a051a29ee7a230e43b6f068d}\label{class_cut_box_aeceacbe7a051a29ee7a230e43b6f068d}} 
+\index{CutBox@{CutBox}!zi@{zi}}
+\index{zi@{zi}!CutBox@{CutBox}}
+\doxysubsubsection{\texorpdfstring{zi}{zi}}
+{\footnotesize\ttfamily int Cut\+Box\+::zi\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Downloads/\+Escultor3\+D\+\_\+parte2/\mbox{\hyperlink{cutbox_8h}{cutbox.\+h}}\item 
+D\+:/\+Downloads/\+Escultor3\+D\+\_\+parte2/\mbox{\hyperlink{cutbox_8cpp}{cutbox.\+cpp}}\end{DoxyCompactItemize}

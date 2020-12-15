@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Escultor-parte2.1: Código-Fonte de D:/Downloads/Escultor3D_parte2/cutbox.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Escultor-parte2.1
+   &#160;<span id="projectnumber">2.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_2c12105386bcc5c3935feab96f296a41.html">Downloads</a></li><li class="navelem"><a class="el" href="dir_3c73d800c37229f63551f3441c0ce61b.html">Escultor3D_parte2</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">cutbox.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="cutbox_8h.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef CUTBOX_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define CUTBOX_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_figura_geometrica_8h.html">FiguraGeometrica.h</a>&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_sculptor_8h.html">Sculptor.h</a>&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="class_cut_box.html">    5</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_cut_box.html">CutBox</a> : <span class="keyword">public</span> <a class="code" href="class_figura_geometrica.html">FiguraGeometrica</a></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_cut_box.html#aeceacbe7a051a29ee7a230e43b6f068d">    8</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_cut_box.html#a9b3c2e2f41f7f73f324c59d11fc73e9b">x0</a>,<a class="code" href="class_cut_box.html#aa8865d81bd52f5f537ab7f9b476b914a">xi</a>,<a class="code" href="class_cut_box.html#ab8bd7a8a94c1336daad8d808f5d62f68">y0</a>,<a class="code" href="class_cut_box.html#a94df73030da7b107ea8428499c40dad5">yi</a>,<a class="code" href="class_cut_box.html#afb2ac28e61b363d723cc1af03edb37f2">z0</a>,<a class="code" href="class_cut_box.html#aeceacbe7a051a29ee7a230e43b6f068d">zi</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="class_cut_box.html#a53a8f4bdb570b771aec46a954e9e10a6">CutBox</a>(<span class="keywordtype">int</span> _x0, <span class="keywordtype">int</span> _xi, <span class="keywordtype">int</span> _y0, <span class="keywordtype">int</span> _yi, <span class="keywordtype">int</span> _z0, <span class="keywordtype">int</span> _zi);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_cut_box.html#a720bd913e3c807760d203fd4e6772b10">draw</a>(<a class="code" href="class_sculptor.html">Sculptor</a> &amp;screen);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;};</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#endif // CUTBOX_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_figura_geometrica_html"><div class="ttname"><a href="class_figura_geometrica.html">FiguraGeometrica</a></div><div class="ttdef"><b>Definition:</b> FiguraGeometrica.h:4</div></div>
+<div class="ttc" id="aclass_cut_box_html_a53a8f4bdb570b771aec46a954e9e10a6"><div class="ttname"><a href="class_cut_box.html#a53a8f4bdb570b771aec46a954e9e10a6">CutBox::CutBox</a></div><div class="ttdeci">CutBox(int _x0, int _xi, int _y0, int _yi, int _z0, int _zi)</div><div class="ttdef"><b>Definition:</b> cutbox.cpp:3</div></div>
+<div class="ttc" id="aclass_cut_box_html_ab8bd7a8a94c1336daad8d808f5d62f68"><div class="ttname"><a href="class_cut_box.html#ab8bd7a8a94c1336daad8d808f5d62f68">CutBox::y0</a></div><div class="ttdeci">int y0</div><div class="ttdef"><b>Definition:</b> cutbox.h:8</div></div>
+<div class="ttc" id="aclass_cut_box_html_a94df73030da7b107ea8428499c40dad5"><div class="ttname"><a href="class_cut_box.html#a94df73030da7b107ea8428499c40dad5">CutBox::yi</a></div><div class="ttdeci">int yi</div><div class="ttdef"><b>Definition:</b> cutbox.h:8</div></div>
+<div class="ttc" id="aclass_cut_box_html_a9b3c2e2f41f7f73f324c59d11fc73e9b"><div class="ttname"><a href="class_cut_box.html#a9b3c2e2f41f7f73f324c59d11fc73e9b">CutBox::x0</a></div><div class="ttdeci">int x0</div><div class="ttdef"><b>Definition:</b> cutbox.h:8</div></div>
+<div class="ttc" id="aclass_sculptor_html"><div class="ttname"><a href="class_sculptor.html">Sculptor</a></div><div class="ttdef"><b>Definition:</b> Sculptor.h:9</div></div>
+<div class="ttc" id="aclass_cut_box_html_afb2ac28e61b363d723cc1af03edb37f2"><div class="ttname"><a href="class_cut_box.html#afb2ac28e61b363d723cc1af03edb37f2">CutBox::z0</a></div><div class="ttdeci">int z0</div><div class="ttdef"><b>Definition:</b> cutbox.h:8</div></div>
+<div class="ttc" id="aclass_cut_box_html_aa8865d81bd52f5f537ab7f9b476b914a"><div class="ttname"><a href="class_cut_box.html#aa8865d81bd52f5f537ab7f9b476b914a">CutBox::xi</a></div><div class="ttdeci">int xi</div><div class="ttdef"><b>Definition:</b> cutbox.h:8</div></div>
+<div class="ttc" id="a_figura_geometrica_8h_html"><div class="ttname"><a href="_figura_geometrica_8h.html">FiguraGeometrica.h</a></div></div>
+<div class="ttc" id="aclass_cut_box_html_aeceacbe7a051a29ee7a230e43b6f068d"><div class="ttname"><a href="class_cut_box.html#aeceacbe7a051a29ee7a230e43b6f068d">CutBox::zi</a></div><div class="ttdeci">int zi</div><div class="ttdef"><b>Definition:</b> cutbox.h:8</div></div>
+<div class="ttc" id="a_sculptor_8h_html"><div class="ttname"><a href="_sculptor_8h.html">Sculptor.h</a></div></div>
+<div class="ttc" id="aclass_cut_box_html"><div class="ttname"><a href="class_cut_box.html">CutBox</a></div><div class="ttdef"><b>Definition:</b> cutbox.h:6</div></div>
+<div class="ttc" id="aclass_cut_box_html_a720bd913e3c807760d203fd4e6772b10"><div class="ttname"><a href="class_cut_box.html#a720bd913e3c807760d203fd4e6772b10">CutBox::draw</a></div><div class="ttdeci">void draw(Sculptor &amp;screen)</div><div class="ttdef"><b>Definition:</b> cutbox.cpp:8</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

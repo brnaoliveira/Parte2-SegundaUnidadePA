@@ -1,0 +1,148 @@
+\hypertarget{class_interpretador}{}\doxysection{Referência da Classe Interpretador}
+\label{class_interpretador}\index{Interpretador@{Interpretador}}
+
+
+{\ttfamily \#include $<$interpretador.\+h$>$}
+
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_interpretador_a12d844a7ab8d634e96b57971c9aedd9e}{Interpretador}} ()
+\item 
+vector$<$ \mbox{\hyperlink{class_figura_geometrica}{Figura\+Geometrica}} $\ast$ $>$ \mbox{\hyperlink{class_interpretador_a95efc1a97d505d593dc8487300095958}{Recover}} (string filename)
+\item 
+int \mbox{\hyperlink{class_interpretador_a21bb78f60382699fcd32f35c9c4b6ce8}{get\+Dimx}} ()
+\item 
+int \mbox{\hyperlink{class_interpretador_ac76029812005ac606d0bbda805e87bfc}{get\+Dimy}} ()
+\item 
+int \mbox{\hyperlink{class_interpretador_a527bbdc1850ba66ef66d97aecb322576}{get\+Dimz}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{class_interpretador_a12d844a7ab8d634e96b57971c9aedd9e}\label{class_interpretador_a12d844a7ab8d634e96b57971c9aedd9e}} 
+\index{Interpretador@{Interpretador}!Interpretador@{Interpretador}}
+\index{Interpretador@{Interpretador}!Interpretador@{Interpretador}}
+\doxysubsubsection{\texorpdfstring{Interpretador()}{Interpretador()}}
+{\footnotesize\ttfamily Interpretador\+::\+Interpretador (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{19 \{}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{class_interpretador_a21bb78f60382699fcd32f35c9c4b6ce8}\label{class_interpretador_a21bb78f60382699fcd32f35c9c4b6ce8}} 
+\index{Interpretador@{Interpretador}!getDimx@{getDimx}}
+\index{getDimx@{getDimx}!Interpretador@{Interpretador}}
+\doxysubsubsection{\texorpdfstring{getDimx()}{getDimx()}}
+{\footnotesize\ttfamily int Interpretador\+::get\+Dimx (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{80 \{}
+\DoxyCodeLine{81     \textcolor{keywordflow}{return} dimx;}
+\DoxyCodeLine{82 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_interpretador_ac76029812005ac606d0bbda805e87bfc}\label{class_interpretador_ac76029812005ac606d0bbda805e87bfc}} 
+\index{Interpretador@{Interpretador}!getDimy@{getDimy}}
+\index{getDimy@{getDimy}!Interpretador@{Interpretador}}
+\doxysubsubsection{\texorpdfstring{getDimy()}{getDimy()}}
+{\footnotesize\ttfamily int Interpretador\+::get\+Dimy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{84 \{}
+\DoxyCodeLine{85     \textcolor{keywordflow}{return} dimy;}
+\DoxyCodeLine{86 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_interpretador_a527bbdc1850ba66ef66d97aecb322576}\label{class_interpretador_a527bbdc1850ba66ef66d97aecb322576}} 
+\index{Interpretador@{Interpretador}!getDimz@{getDimz}}
+\index{getDimz@{getDimz}!Interpretador@{Interpretador}}
+\doxysubsubsection{\texorpdfstring{getDimz()}{getDimz()}}
+{\footnotesize\ttfamily int Interpretador\+::get\+Dimz (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{88 \{}
+\DoxyCodeLine{89     \textcolor{keywordflow}{return} dimz;}
+\DoxyCodeLine{90 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_interpretador_a95efc1a97d505d593dc8487300095958}\label{class_interpretador_a95efc1a97d505d593dc8487300095958}} 
+\index{Interpretador@{Interpretador}!Recover@{Recover}}
+\index{Recover@{Recover}!Interpretador@{Interpretador}}
+\doxysubsubsection{\texorpdfstring{Recover()}{Recover()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_figura_geometrica}{Figura\+Geometrica}} $\ast$ $>$ Interpretador\+::\+Recover (\begin{DoxyParamCaption}\item[{string}]{filename }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{24 \{}
+\DoxyCodeLine{25     vector<FiguraGeometrica*> figs;}
+\DoxyCodeLine{26     \textcolor{keywordtype}{string} s,token;}
+\DoxyCodeLine{27     stringstream ss;}
+\DoxyCodeLine{28     ifstream fin;}
+\DoxyCodeLine{29     fin.open(filename.c\_str());}
+\DoxyCodeLine{30     \textcolor{keywordflow}{if}(!fin.is\_open())}
+\DoxyCodeLine{31     \{}
+\DoxyCodeLine{32         exit(1);}
+\DoxyCodeLine{33     \}}
+\DoxyCodeLine{34     \textcolor{keywordflow}{while} (fin.good()) \{}
+\DoxyCodeLine{35         getline(fin,s);}
+\DoxyCodeLine{36         \textcolor{keywordflow}{if}(fin.good())\{}
+\DoxyCodeLine{37             ss.clear();}
+\DoxyCodeLine{38             ss.str(s);}
+\DoxyCodeLine{39             ss >> token;}
+\DoxyCodeLine{40             \textcolor{keywordflow}{if}(token.compare(\textcolor{stringliteral}{"{}dim"{}}) ==0)\{}
+\DoxyCodeLine{41                 ss >> dimx >> dimy >> dimz;}
+\DoxyCodeLine{42             \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (token.compare(\textcolor{stringliteral}{"{}putvoxel"{}})==0)\{}
+\DoxyCodeLine{43                 \textcolor{keywordtype}{int} x,y,z;}
+\DoxyCodeLine{44                 ss >> x >> y >> z >> r >> g >> b >> a;}
+\DoxyCodeLine{45                 figs.push\_back(\textcolor{keyword}{new} \mbox{\hyperlink{class_put_voxel}{PutVoxel}}(x,y,z,r,g,b,a));}
+\DoxyCodeLine{46             \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(token.compare(\textcolor{stringliteral}{"{}putbox"{}})==0)\{}
+\DoxyCodeLine{47                 \textcolor{keywordtype}{int} x0,xi,y0,yi,z0,zi;}
+\DoxyCodeLine{48                 ss >> x0 >> xi >> y0 >> yi >> z0 >> zi >> r >> g >> b >> a;}
+\DoxyCodeLine{49                 figs.push\_back(\textcolor{keyword}{new} \mbox{\hyperlink{class_put_box}{PutBox}}(x0,xi,y0,yi,z0,zi,r,g,b,a));}
+\DoxyCodeLine{50             \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(token.compare(\textcolor{stringliteral}{"{}cutvoxel"{}})==0)\{}
+\DoxyCodeLine{51                 \textcolor{keywordtype}{int} x,y,z;}
+\DoxyCodeLine{52                 ss >> x >> y >> z;}
+\DoxyCodeLine{53                 figs.push\_back(\textcolor{keyword}{new} \mbox{\hyperlink{class_cut_voxel}{CutVoxel}}(x,y,z));}
+\DoxyCodeLine{54             \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(token.compare(\textcolor{stringliteral}{"{}cutbox"{}}) == 0)\{}
+\DoxyCodeLine{55                 \textcolor{keywordtype}{int} x0,xi,y0,yi,z0,zi;}
+\DoxyCodeLine{56                 ss >> x0 >> xi >> y0 >> yi >> z0 >> zi;}
+\DoxyCodeLine{57                 figs.push\_back(\textcolor{keyword}{new} \mbox{\hyperlink{class_cut_box}{CutBox}}(x0,xi,y0,yi,z0,zi));}
+\DoxyCodeLine{58             \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(token.compare(\textcolor{stringliteral}{"{}putellipsoid"{}}) == 0)\{}
+\DoxyCodeLine{59                 \textcolor{keywordtype}{int} xc,yc,zc,rx,ry,rz;}
+\DoxyCodeLine{60                 ss >> xc >> yc >> zc >> rx >> ry >> rz;}
+\DoxyCodeLine{61                 figs.push\_back(\textcolor{keyword}{new} \mbox{\hyperlink{class_put_ellipsoid}{PutEllipsoid}}(xc,yc,zc,rx,ry,rz,dimx,dimy,dimz,r,g,b,a));}
+\DoxyCodeLine{62             \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(token.compare(\textcolor{stringliteral}{"{}putellipsoid"{}}) == 0)\{}
+\DoxyCodeLine{63                 \textcolor{keywordtype}{int} xc,yc,zc,rx,ry,rz;}
+\DoxyCodeLine{64                 ss >> xc >> yc >> zc >> rx >> ry >> rz;}
+\DoxyCodeLine{65                 figs.push\_back(\textcolor{keyword}{new} \mbox{\hyperlink{class_cut_ellipsoid}{CutEllipsoid}}(xc,yc,zc,rx,ry,rz,dimx,dimy,dimz));}
+\DoxyCodeLine{66             \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(token.compare(\textcolor{stringliteral}{"{}putsphere"{}}) == 0)\{}
+\DoxyCodeLine{67                 \textcolor{keywordtype}{int} xc,yc,zc,r;}
+\DoxyCodeLine{68                 ss >> xc >> yc >> zc >> r;}
+\DoxyCodeLine{69                 figs.push\_back(\textcolor{keyword}{new} \mbox{\hyperlink{class_put_sphere}{PutSphere}}(xc,yc,zc,r,dimx,dimy,dimz,r,g,b,a));}
+\DoxyCodeLine{70             \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(token.compare(\textcolor{stringliteral}{"{}cutsphere"{}}) == 0)\{}
+\DoxyCodeLine{71                 \textcolor{keywordtype}{int} xc,yc,zc,r;}
+\DoxyCodeLine{72                 ss >> xc >> yc >> zc >> r;}
+\DoxyCodeLine{73                 figs.push\_back(\textcolor{keyword}{new} \mbox{\hyperlink{class_cut_sphere}{CutSphere}}(xc,yc,zc,r,dimx,dimy,dimz));}
+\DoxyCodeLine{74             \}}
+\DoxyCodeLine{75         \}}
+\DoxyCodeLine{76     \}}
+\DoxyCodeLine{77     \textcolor{keywordflow}{return} figs;}
+\DoxyCodeLine{78 \}}
+
+\end{DoxyCode}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Downloads/\+Escultor3\+D\+\_\+parte2/\mbox{\hyperlink{interpretador_8h}{interpretador.\+h}}\item 
+D\+:/\+Downloads/\+Escultor3\+D\+\_\+parte2/\mbox{\hyperlink{interpretador_8cpp}{interpretador.\+cpp}}\end{DoxyCompactItemize}

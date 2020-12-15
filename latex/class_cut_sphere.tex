@@ -1,0 +1,138 @@
+\hypertarget{class_cut_sphere}{}\doxysection{Referência da Classe Cut\+Sphere}
+\label{class_cut_sphere}\index{CutSphere@{CutSphere}}
+
+
+{\ttfamily \#include $<$cutsphere.\+h$>$}
+
+Diagrama de hierarquia para Cut\+Sphere\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_cut_sphere}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cut_sphere_aa37c2738c9a527c568e3108014b2cc21}{Cut\+Sphere}} (int \+\_\+xcenter, int \+\_\+ycenter, int \+\_\+zcenter, int \+\_\+radius, int \+\_\+dimx, int \+\_\+dimy, int \+\_\+dimz)
+\item 
+void \mbox{\hyperlink{class_cut_sphere_a4c101da67aab1419feef3ef0a591d3b1}{draw}} (\mbox{\hyperlink{class_sculptor}{Sculptor}} \&screen)
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_cut_sphere_a9b02dc65220b2e2eb2d97c0ec282375a}{xcenter}}
+\item 
+int \mbox{\hyperlink{class_cut_sphere_adf21bbf750b8e318db9a02786881542e}{ycenter}}
+\item 
+int \mbox{\hyperlink{class_cut_sphere_a06dd02da6f637b0de55d2e02aeb3b9af}{zcenter}}
+\item 
+int \mbox{\hyperlink{class_cut_sphere_a1952c3bad1eae06bff6776292381b4ed}{radius}}
+\item 
+int \mbox{\hyperlink{class_cut_sphere_a29c8161be30cf19387f60aeb1bc5f0f7}{dimx}}
+\item 
+int \mbox{\hyperlink{class_cut_sphere_a025425ba6c522cb8353b3e6b3160742d}{dimy}}
+\item 
+int \mbox{\hyperlink{class_cut_sphere_a10c7782876cf430107f6ce369c761df2}{dimz}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{class_cut_sphere_aa37c2738c9a527c568e3108014b2cc21}\label{class_cut_sphere_aa37c2738c9a527c568e3108014b2cc21}} 
+\index{CutSphere@{CutSphere}!CutSphere@{CutSphere}}
+\index{CutSphere@{CutSphere}!CutSphere@{CutSphere}}
+\doxysubsubsection{\texorpdfstring{CutSphere()}{CutSphere()}}
+{\footnotesize\ttfamily Cut\+Sphere\+::\+Cut\+Sphere (\begin{DoxyParamCaption}\item[{int}]{\+\_\+xcenter,  }\item[{int}]{\+\_\+ycenter,  }\item[{int}]{\+\_\+zcenter,  }\item[{int}]{\+\_\+radius,  }\item[{int}]{\+\_\+dimx,  }\item[{int}]{\+\_\+dimy,  }\item[{int}]{\+\_\+dimz }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5 \{}
+\DoxyCodeLine{6     \mbox{\hyperlink{class_cut_sphere_a9b02dc65220b2e2eb2d97c0ec282375a}{xcenter}} = \_xcenter; \mbox{\hyperlink{class_cut_sphere_adf21bbf750b8e318db9a02786881542e}{ycenter}} = \_ycenter; \mbox{\hyperlink{class_cut_sphere_a06dd02da6f637b0de55d2e02aeb3b9af}{zcenter}} = \_zcenter; \mbox{\hyperlink{class_cut_sphere_a1952c3bad1eae06bff6776292381b4ed}{radius}} = \_radius;}
+\DoxyCodeLine{7     \mbox{\hyperlink{class_cut_sphere_a29c8161be30cf19387f60aeb1bc5f0f7}{dimx}} = \_dimx; \mbox{\hyperlink{class_cut_sphere_a025425ba6c522cb8353b3e6b3160742d}{dimy}} = \_dimy; \mbox{\hyperlink{class_cut_sphere_a10c7782876cf430107f6ce369c761df2}{dimz}} = \_dimz;}
+\DoxyCodeLine{8 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{class_cut_sphere_a4c101da67aab1419feef3ef0a591d3b1}\label{class_cut_sphere_a4c101da67aab1419feef3ef0a591d3b1}} 
+\index{CutSphere@{CutSphere}!draw@{draw}}
+\index{draw@{draw}!CutSphere@{CutSphere}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Cut\+Sphere\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sculptor}{Sculptor}} \&}]{screen }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implementa \mbox{\hyperlink{class_figura_geometrica_a44fdec95db5c300865af1d68dc236b14}{Figura\+Geometrica}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11 \{}
+\DoxyCodeLine{12     \textcolor{keywordflow}{if}(screen.\mbox{\hyperlink{class_sculptor_a0c93c565ba67650d54d6f61ff81ff802}{verificaCord}}(\mbox{\hyperlink{class_cut_sphere_a9b02dc65220b2e2eb2d97c0ec282375a}{xcenter}},\mbox{\hyperlink{class_cut_sphere_adf21bbf750b8e318db9a02786881542e}{ycenter}},\mbox{\hyperlink{class_cut_sphere_a06dd02da6f637b0de55d2e02aeb3b9af}{zcenter}}))\{}
+\DoxyCodeLine{13         \textcolor{keywordtype}{int} i,j,w;}
+\DoxyCodeLine{14         \textcolor{keywordflow}{for}(i=0;i<\mbox{\hyperlink{class_cut_sphere_a10c7782876cf430107f6ce369c761df2}{dimz}};i++)}
+\DoxyCodeLine{15         \{}
+\DoxyCodeLine{16             \textcolor{keywordflow}{for}(j=0;j<\mbox{\hyperlink{class_cut_sphere_a29c8161be30cf19387f60aeb1bc5f0f7}{dimx}};j++)}
+\DoxyCodeLine{17             \{}
+\DoxyCodeLine{18                 \textcolor{keywordflow}{for}(w=0;w<\mbox{\hyperlink{class_cut_sphere_a025425ba6c522cb8353b3e6b3160742d}{dimy}};w++)}
+\DoxyCodeLine{19                 \{}
+\DoxyCodeLine{20                     \textcolor{keywordflow}{if}(\mbox{\hyperlink{_sculptor_8cpp_aabf9cc6b6b14c65c22f065d37ae46114}{satisfazEqEsfera}}(i,j,w,\mbox{\hyperlink{class_cut_sphere_a9b02dc65220b2e2eb2d97c0ec282375a}{xcenter}},\mbox{\hyperlink{class_cut_sphere_adf21bbf750b8e318db9a02786881542e}{ycenter}},\mbox{\hyperlink{class_cut_sphere_a06dd02da6f637b0de55d2e02aeb3b9af}{zcenter}},\mbox{\hyperlink{class_cut_sphere_a1952c3bad1eae06bff6776292381b4ed}{radius}}))\{ \textcolor{comment}{// verifica se o pixel satisfaz a equação da esfera com os parametros informados}}
+\DoxyCodeLine{21                         screen.\mbox{\hyperlink{class_sculptor_ad9d714a35fc8ae16d06eb5df37c3493c}{cutVoxel}}(j,w,i);}
+\DoxyCodeLine{22                     \}}
+\DoxyCodeLine{23                 \}}
+\DoxyCodeLine{24             \}}
+\DoxyCodeLine{25         \}}
+\DoxyCodeLine{26     \}}
+\DoxyCodeLine{27 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{class_cut_sphere_a29c8161be30cf19387f60aeb1bc5f0f7}\label{class_cut_sphere_a29c8161be30cf19387f60aeb1bc5f0f7}} 
+\index{CutSphere@{CutSphere}!dimx@{dimx}}
+\index{dimx@{dimx}!CutSphere@{CutSphere}}
+\doxysubsubsection{\texorpdfstring{dimx}{dimx}}
+{\footnotesize\ttfamily int Cut\+Sphere\+::dimx\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_cut_sphere_a025425ba6c522cb8353b3e6b3160742d}\label{class_cut_sphere_a025425ba6c522cb8353b3e6b3160742d}} 
+\index{CutSphere@{CutSphere}!dimy@{dimy}}
+\index{dimy@{dimy}!CutSphere@{CutSphere}}
+\doxysubsubsection{\texorpdfstring{dimy}{dimy}}
+{\footnotesize\ttfamily int Cut\+Sphere\+::dimy\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_cut_sphere_a10c7782876cf430107f6ce369c761df2}\label{class_cut_sphere_a10c7782876cf430107f6ce369c761df2}} 
+\index{CutSphere@{CutSphere}!dimz@{dimz}}
+\index{dimz@{dimz}!CutSphere@{CutSphere}}
+\doxysubsubsection{\texorpdfstring{dimz}{dimz}}
+{\footnotesize\ttfamily int Cut\+Sphere\+::dimz\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_cut_sphere_a1952c3bad1eae06bff6776292381b4ed}\label{class_cut_sphere_a1952c3bad1eae06bff6776292381b4ed}} 
+\index{CutSphere@{CutSphere}!radius@{radius}}
+\index{radius@{radius}!CutSphere@{CutSphere}}
+\doxysubsubsection{\texorpdfstring{radius}{radius}}
+{\footnotesize\ttfamily int Cut\+Sphere\+::radius\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_cut_sphere_a9b02dc65220b2e2eb2d97c0ec282375a}\label{class_cut_sphere_a9b02dc65220b2e2eb2d97c0ec282375a}} 
+\index{CutSphere@{CutSphere}!xcenter@{xcenter}}
+\index{xcenter@{xcenter}!CutSphere@{CutSphere}}
+\doxysubsubsection{\texorpdfstring{xcenter}{xcenter}}
+{\footnotesize\ttfamily int Cut\+Sphere\+::xcenter\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_cut_sphere_adf21bbf750b8e318db9a02786881542e}\label{class_cut_sphere_adf21bbf750b8e318db9a02786881542e}} 
+\index{CutSphere@{CutSphere}!ycenter@{ycenter}}
+\index{ycenter@{ycenter}!CutSphere@{CutSphere}}
+\doxysubsubsection{\texorpdfstring{ycenter}{ycenter}}
+{\footnotesize\ttfamily int Cut\+Sphere\+::ycenter\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_cut_sphere_a06dd02da6f637b0de55d2e02aeb3b9af}\label{class_cut_sphere_a06dd02da6f637b0de55d2e02aeb3b9af}} 
+\index{CutSphere@{CutSphere}!zcenter@{zcenter}}
+\index{zcenter@{zcenter}!CutSphere@{CutSphere}}
+\doxysubsubsection{\texorpdfstring{zcenter}{zcenter}}
+{\footnotesize\ttfamily int Cut\+Sphere\+::zcenter\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Downloads/\+Escultor3\+D\+\_\+parte2/\mbox{\hyperlink{cutsphere_8h}{cutsphere.\+h}}\item 
+D\+:/\+Downloads/\+Escultor3\+D\+\_\+parte2/\mbox{\hyperlink{cutsphere_8cpp}{cutsphere.\+cpp}}\end{DoxyCompactItemize}

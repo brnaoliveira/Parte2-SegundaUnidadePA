@@ -1,0 +1,58 @@
+\hypertarget{main_8cpp}{}\doxysection{Referência do Arquivo D\+:/\+Downloads/\+Escultor3\+D\+\_\+parte2/main.cpp}
+\label{main_8cpp}\index{D:/Downloads/Escultor3D\_parte2/main.cpp@{D:/Downloads/Escultor3D\_parte2/main.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$Figura\+Geometrica.\+h$>$}\newline
+{\ttfamily \#include $<$Sculptor.\+h$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$interpretador.\+h$>$}\newline
+{\ttfamily \#include $<$putvoxel.\+h$>$}\newline
+{\ttfamily \#include $<$cutvoxel.\+h$>$}\newline
+{\ttfamily \#include $<$putbox.\+h$>$}\newline
+{\ttfamily \#include $<$cutbox.\+h$>$}\newline
+\doxysubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variáveis}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{main_8cpp_ae373450b3bb49ffe20959660bf683eb6}{Teste\+Escultor}} = \char`\"{}saida\+\_\+teste1.\+O\+FF\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Funções}
+\mbox{\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13 \{}
+\DoxyCodeLine{14     \mbox{\hyperlink{class_sculptor}{Sculptor}} *escultura;}
+\DoxyCodeLine{15     \mbox{\hyperlink{class_interpretador}{Interpretador}} interpretador;}
+\DoxyCodeLine{16     vector<FiguraGeometrica*> fig = interpretador.\mbox{\hyperlink{class_interpretador_a95efc1a97d505d593dc8487300095958}{Recover}}(\textcolor{stringliteral}{"{}C:/Users/enric/Desktop/Nova pasta/teste1.txt"{}});}
+\DoxyCodeLine{17     escultura = \textcolor{keyword}{new} \mbox{\hyperlink{class_sculptor}{Sculptor}}(interpretador.\mbox{\hyperlink{class_interpretador_a21bb78f60382699fcd32f35c9c4b6ce8}{getDimx}}(),interpretador.\mbox{\hyperlink{class_interpretador_ac76029812005ac606d0bbda805e87bfc}{getDimy}}(),interpretador.\mbox{\hyperlink{class_interpretador_a527bbdc1850ba66ef66d97aecb322576}{getDimz}}());}
+\DoxyCodeLine{18     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{double} i = 0; i < fig.size();i++)\{}
+\DoxyCodeLine{19         fig[i]-\/>draw(*escultura);}
+\DoxyCodeLine{20     \}}
+\DoxyCodeLine{21     escultura-\/>\mbox{\hyperlink{class_sculptor_aa8ed61fc7cae10c4d7a895330fe5e309}{writeOFF}}(\mbox{\hyperlink{main_8cpp_ae373450b3bb49ffe20959660bf683eb6}{TesteEscultor}});}
+\DoxyCodeLine{22     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{double} i = 0; i < fig.size();i++)\{}
+\DoxyCodeLine{23         \textcolor{keyword}{delete} fig[i];}
+\DoxyCodeLine{24     \}}
+\DoxyCodeLine{25     \textcolor{keyword}{delete} escultura;}
+\DoxyCodeLine{26     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{27 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Variáveis}
+\mbox{\Hypertarget{main_8cpp_ae373450b3bb49ffe20959660bf683eb6}\label{main_8cpp_ae373450b3bb49ffe20959660bf683eb6}} 
+\index{main.cpp@{main.cpp}!TesteEscultor@{TesteEscultor}}
+\index{TesteEscultor@{TesteEscultor}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{TesteEscultor}{TesteEscultor}}
+{\footnotesize\ttfamily char$\ast$ Teste\+Escultor = \char`\"{}saida\+\_\+teste1.\+O\+FF\char`\"{}}
+
