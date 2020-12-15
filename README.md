@@ -1,5 +1,4 @@
 # Segunda parte - Segunda unidade - Programação Avançada
 
 Discentes: 
-Bruna Oliveira
-Enrico Luigi
+Bruna Oliveira  e  Enrico Luigi
