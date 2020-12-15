@@ -1,1 +1,5 @@
-# Parte2-SegundaUnidadePA
+# Segunda parte - Segunda unidade - Programação Avançada
+
+Discentes: 
+Bruna Oliveira
+Enrico Luigi
